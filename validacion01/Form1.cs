@@ -73,7 +73,7 @@ namespace validacion01
 
             return ok;
         }
-
+        //codigo funcional
         private void borrarmensajeerror()
         {
             errorProvider1.SetError(txtnombre, "");
