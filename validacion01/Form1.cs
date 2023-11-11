@@ -45,33 +45,35 @@ namespace validacion01
 
         private bool ValidarCampos()
         {
-            bool ok = false;
+            bool ok = true;
+
             if (txtnombre.Text == "")
             {
-                ok = true;
+                ok = false;
                 errorProvider1.SetError(txtnombre, "Ingresar Nombre");
             }
 
             if (txtapellido.Text == "")
             {
-                ok = true;
+                ok = false;
                 errorProvider1.SetError(txtapellido, "Ingresar Apellido");
             }
 
             if (txtemail.Text == "")
             {
-                ok = true;
+                ok = false;
                 errorProvider1.SetError(txtemail, "Ingresar Email");
             }
 
             if (txtdireccion.Text == "")
             {
-                ok = true;
+                ok = false;
                 errorProvider1.SetError(txtdireccion, "Ingresar Direccion");
             }
 
             return ok;
         }
+
         private void borrarmensajeerror()
         {
             errorProvider1.SetError(txtnombre, "");
