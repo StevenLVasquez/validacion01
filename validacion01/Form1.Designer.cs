@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             txtnombre = new TextBox();
             txtapellido = new TextBox();
             txtemail = new TextBox();
@@ -40,6 +41,8 @@
             label1 = new Label();
             lbltitulo = new Label();
             btnhabilitar = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // txtnombre
@@ -150,6 +153,11 @@
             btnhabilitar.TabIndex = 10;
             btnhabilitar.Text = "HABILITAR";
             btnhabilitar.UseVisualStyleBackColor = false;
+            btnhabilitar.Click += btnhabilitar_Click;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // frmvalidacion
             // 
@@ -171,6 +179,8 @@
             Controls.Add(txtnombre);
             Name = "frmvalidacion";
             Text = "Validacion de datos";
+            Load += frmvalidacion_Load;
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,5 +199,6 @@
         private Label label1;
         private Label lbltitulo;
         private Button btnhabilitar;
+        private ErrorProvider errorProvider1;
     }
 }
