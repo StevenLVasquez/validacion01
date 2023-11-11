@@ -124,6 +124,7 @@
             btnvalidar.TabIndex = 8;
             btnvalidar.Text = "Validar";
             btnvalidar.UseVisualStyleBackColor = false;
+            btnvalidar.Click += btnvalidar_Click;
             // 
             // label1
             // 
